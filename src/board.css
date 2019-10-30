@@ -1,0 +1,8 @@
+.board-row {
+    display: flex;
+}
+
+
+.square {
+    flex: 1 1 auto;
+}

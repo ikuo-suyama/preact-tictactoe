@@ -4162,6 +4162,11 @@ readdirp@^2.2.1:
     micromatch "^3.1.10"
     readable-stream "^2.0.2"
 
+redux-zero@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/redux-zero/-/redux-zero-5.1.0.tgz#d07a9bd0b0126738cdbce78b542e907d7e5ed632"
+  integrity sha512-vumZYP44A2Ah5UOR9LzTkKGJHsX9QXt57mNnYRkhzsAEnQM1QjKGLltLn/kmwhuvJCbxV7/VsiON6c1wGpyzvg==
+
 regenerate-unicode-properties@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/regenerate-unicode-properties/-/regenerate-unicode-properties-8.1.0.tgz#ef51e0f0ea4ad424b77bf7cb41f3e015c70a3f0e"

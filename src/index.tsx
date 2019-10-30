@@ -1,4 +1,11 @@
-import {h, render, Component} from 'preact';
-import Board from "./board";
+import {h, render} from 'preact';
+import ConnectedBoard from "./board";
+import store from "./store";
+import {Provider} from "redux-zero/preact";
 
-render(<Board/>, document.body);
+const App = () => (
+  <Provider store={store}>
+    <ConnectedBoard />
+  </Provider>
+);
+render(<App/>, document.body);

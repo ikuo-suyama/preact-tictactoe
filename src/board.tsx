@@ -1,29 +1,29 @@
 import {h, Component} from 'preact';
 import "./board.css"
-import Square from "./square";
+import Square, {SquareProps} from "./square";
 import actions from "./actions";
 import {connect} from "redux-zero/preact";
+
+const range = (to: number) => [...Array(to)];
+
+class BoardRow extends Component<SquareProps> {
+  render(props: SquareProps) {
+    console.log(props);
+    return <div className="board-row">
+      {range(3).map((_, j: number) =>
+        <Square {...props} index={props.index * 3 + j} />
+      )}
+    </div>
+  }
+}
 
 class Board extends Component<any> {
   render({props}) {
     console.log(props);
-    const {board, drop} = props;
     return <div>
-      <div className="board-row">
-        <Square index={0} drop={drop} board={board}/>
-        <Square index={1} drop={drop} board={board}/>
-        <Square index={2} drop={drop} board={board}/>
-      </div>
-      <div className="board-row">
-        <Square index={3} drop={drop} board={board}/>
-        <Square index={4} drop={drop} board={board}/>
-        <Square index={5} drop={drop} board={board}/>
-      </div>
-      <div className="board-row">
-        <Square index={6} drop={drop} board={board}/>
-        <Square index={7} drop={drop} board={board}/>
-        <Square index={8} drop={drop} board={board}/>
-      </div>
+      {range(3).map((_, i: number) =>
+        <BoardRow index={i} {...props}/>
+      )}
     </div>
   }
 }

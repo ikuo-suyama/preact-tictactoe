@@ -10,19 +10,19 @@ class Board extends Component<any> {
     const {board, drop} = props;
     return <div>
       <div className="board-row">
-        <Square value={board[0]} drop={drop}/>
-        <Square value={board[1]} drop={drop}/>
-        <Square value={board[2]} drop={drop}/>
+        <Square index={0} drop={drop} board={board}/>
+        <Square index={1} drop={drop} board={board}/>
+        <Square index={2} drop={drop} board={board}/>
       </div>
       <div className="board-row">
-        <Square value={board[3]} drop={drop}/>
-        <Square value={board[4]} drop={drop}/>
-        <Square value={board[5]} drop={drop}/>
+        <Square index={3} drop={drop} board={board}/>
+        <Square index={4} drop={drop} board={board}/>
+        <Square index={5} drop={drop} board={board}/>
       </div>
       <div className="board-row">
-        <Square value={board[6]} drop={drop}/>
-        <Square value={board[7]} drop={drop}/>
-        <Square value={board[8]} drop={drop}/>
+        <Square index={6} drop={drop} board={board}/>
+        <Square index={7} drop={drop} board={board}/>
+        <Square index={8} drop={drop} board={board}/>
       </div>
     </div>
   }

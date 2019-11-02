@@ -8,7 +8,6 @@ const range = (to: number) => [...Array(to)];
 
 class BoardRow extends Component<SquareProps> {
   render(props: SquareProps) {
-    console.log(props);
     return <div className="board-row">
       {range(3).map((_, j: number) =>
         <Square {...props} index={props.index * 3 + j} />
@@ -19,7 +18,6 @@ class BoardRow extends Component<SquareProps> {
 
 class Board extends Component<any> {
   render({props}) {
-    console.log(props);
     return <div>
       {range(3).map((_, i: number) =>
         <BoardRow index={i} {...props}/>

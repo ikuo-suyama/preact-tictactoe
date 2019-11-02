@@ -1,4 +1,4 @@
-import {h, Component} from 'preact';
+import {h} from 'preact';
 import "./board.css"
 import {BoardState} from "./store";
 
@@ -8,7 +8,6 @@ export interface SquareProps {
   drop: (i: number) => {}
 }
 
-export default function Square(p: SquareProps) {
-  return <div className="square" onClick={() => {p.drop(p.index)}}> {p.board[p.index]} </div>
+export default function Square({index, board, drop}: SquareProps) {
+  return <div className="square" onClick={() => drop(index)}> {board[index]} </div>
 }
-

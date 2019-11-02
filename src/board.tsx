@@ -6,24 +6,20 @@ import {connect} from "redux-zero/preact";
 
 const range = (to: number) => [...Array(to)];
 
-class BoardRow extends Component<SquareProps> {
-  render(props: SquareProps) {
-    return <div className="board-row">
-      {range(3).map((_, j: number) =>
-        <Square {...props} index={props.index * 3 + j} />
-      )}
-    </div>
-  }
+function BoardRow({index, ...others}: SquareProps) {
+  return <div className="board-row">
+    {range(3).map((_, j: number) =>
+      <Square {...others} index={index * 3 + j}/>
+    )}
+  </div>
 }
 
-class Board extends Component<any> {
-  render({props}) {
-    return <div>
-      {range(3).map((_, i: number) =>
-        <BoardRow index={i} {...props}/>
-      )}
-    </div>
-  }
+function Board({props}) {
+  return <div>
+    {range(3).map((_, i: number) =>
+      <BoardRow index={i} {...props}/>
+    )}
+  </div>
 }
 
 const mapToProps = ({board}) => ({board});

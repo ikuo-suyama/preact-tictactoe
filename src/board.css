@@ -4,5 +4,12 @@
 
 
 .square {
+    border: solid blueviolet 1px;
+    height: 30px;
     flex: 1 1 auto;
+    display:flex;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+    align-items: center; /*上下中央*/
+    justify-content: center; /*左右中央*/
 }

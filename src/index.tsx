@@ -8,4 +8,6 @@ const App = () => (
     <ConnectedBoard />
   </Provider>
 );
+export default App
+
 render(<App/>, document.body);

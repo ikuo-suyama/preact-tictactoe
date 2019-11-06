@@ -1,4 +1,4 @@
-import {h, Component} from 'preact';
+import {h} from 'preact';
 import "./board.css"
 import Square, {SquareProps} from "./square";
 import actions from "./actions";

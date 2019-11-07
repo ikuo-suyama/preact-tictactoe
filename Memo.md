@@ -15,3 +15,9 @@ $ yarn ts-jest config:init
 
 jest.config.js に `preset: 'jest-puppeteer'` を追加
 package.json に `test:'jest'` scriptを追加 
+
+babel経由の必要がありそう
+
+```sh
+$ yarn add -D babel-jest @babel/preset-env
+```

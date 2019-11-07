@@ -1,18 +1,23 @@
-import {h, render} from 'preact';
+import {h} from 'preact';
 import App from './index'
+import Board from './board'
 
-const spy = jest.fn()
+import {mount} from 'enzyme'
+import Square from './square';
 
 describe("<App /> e2e tests", () => {
-  let scratch;
 
+  let app;
   beforeEach(done => {
-    scratch = document.createElement('div');
-    render(<App/>, scratch);
+    app = mount(<App/>);
     done()
   });
 
-  it("should display proper information about pages", () => {
-    expect(scratch.innerHTML).toContain("-");
+  it("1つの<Board>を含む", () => {
+    expect(app.find(Board).length).toEqual(1)
   });
+  it("９つの<Square>を含む", () => {
+    expect(app.find(Square).length).toEqual(9)
+  });
+
 });
